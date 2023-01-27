@@ -25,6 +25,13 @@ camera_t camera = {
   .zfar = 400
 };
 
+void processinput() {
+  if(keystate(KEY_UP)) camera.y++;
+  if(keystate(KEY_DOWN)) camera.y--;
+  if(keystate(KEY_LEFT)) camera.x--;
+  if(keystate(KEY_RIGHT)) camera.x++;
+}
+
 int main(int argc, char* args[]) {
   setvideomode(videomode_320x200);
 
@@ -45,6 +52,8 @@ int main(int argc, char* args[]) {
     waitvbl();
     clearscreen();
     
+    processinput();
+
     float plx = -camera.zfar;
     float ply = +camera.zfar;
 
