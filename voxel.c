@@ -14,7 +14,7 @@ int main(int argc, char* args[]) {
   uint8_t* framebuffer = screenbuffer();
 
   while(!shuttingdown()) {
-    waitubl();
+    waitvbl();
     clearscreen();
     //
     //
