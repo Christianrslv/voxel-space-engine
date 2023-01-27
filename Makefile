@@ -1,5 +1,5 @@
 build:
-	gcc *.c `sd12-config --libs --cflags` -lGLEW -framework OpenGL -lpthread -o voxel
+	gcc *.c `sdl2-config --libs --cflags` -lGLEW -lGL -lm -ldl -lpthread -o voxel
 
 run:
 	./voxel
