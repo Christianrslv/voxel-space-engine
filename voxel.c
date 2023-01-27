@@ -60,7 +60,7 @@ void processinput() {
   } else {
     if(camera.tilt < 0) camera.tilt += 0.05;
   }
-  if(keystate(KEY_SHIFT)) camera.height++;
+  if(keystate(KEY_LSHIFT)) camera.height++;
   if(keystate(KEY_LCONTROL)) camera.height--;
   if(keystate(KEY_UP)) camera.horizon += 1.5;
   if(keystate(KEY_DOWN)) camera.horizon -= 1.5;
